@@ -1,0 +1,29 @@
+swagger: "2.0"
+info:
+  title: Simple Back.
+  description: |
+
+    AIOHTTP Python backend stub.
+  version: "0.0.1"
+produces:
+  - application/json
+
+
+paths:
+  /{name}:
+    get:
+      summary: Returns string "Hello, {name}".
+      parameters:
+        - $ref: "#/parameters/name"
+      responses:
+        "200":
+          description: a string.
+
+
+parameters:
+  name:
+    name: name
+    in: path
+    description: Name
+    required: true
+    type: string
