@@ -3,14 +3,19 @@ from aiohttp import web
 from aiohttp_swagger import setup_swagger
 from simple_back import handlers
 from simple_back import utils
+from simple_back.utils import setup_logger
+
+logger = setup_logger()
 
 
 THIS_DIR = pathlib.Path(__file__).parent
 
 
 def setup_routes(app):
-    app.router.add_get('/', handlers.welcome)
+    app.router.add_get('/', handlers.index)
+    app.router.add_get('/hc', handlers.health_check)
     app.router.add_get('/{name}', handlers.welcome)
+    app.router.add_get('/log/{log_msg}', handlers.log_msg)
 
 
 async def startup(app: web.Application):

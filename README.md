@@ -1,4 +1,6 @@
 TODO:
 
-1. Add logger.
-2. Create docker build.
+* Add logger.
+* Add settings.
+* Add authentication.
+* Add tests.

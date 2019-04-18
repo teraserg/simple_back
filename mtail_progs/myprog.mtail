@@ -1,0 +1,6 @@
+const MATCH_ERROR /(?i)(error)/
+counter my_errors
+
+// + MATCH_ERROR + //{
+  my_errors++
+}

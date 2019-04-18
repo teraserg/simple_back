@@ -1,0 +1,19 @@
+[2019-04-08 17:05:47 +0300] [39589] [INFO] Starting gunicorn 19.9.0
+[2019-04-08 17:05:47 +0300] [39589] [INFO] Listening at: http://127.0.0.1:8000 (39589)
+[2019-04-08 17:05:47 +0300] [39589] [INFO] Using worker: aiohttp.worker.GunicornWebWorker
+[2019-04-08 17:05:47 +0300] [39593] [INFO] Booting worker with pid: 39593
+[2019-04-08 17:07:55 +0300] [39589] [INFO] Handling signal: int
+[2019-04-08 17:07:55 +0300] [39593] [INFO] Worker exiting (pid: 39593)
+[2019-04-08 17:07:55 +0300] [39589] [INFO] Shutting down: Master
+[2019-04-08 17:18:01 +0300] [39849] [INFO] Starting gunicorn 19.9.0
+[2019-04-08 17:18:01 +0300] [39849] [INFO] Listening at: http://127.0.0.1:8000 (39849)
+[2019-04-08 17:18:01 +0300] [39849] [INFO] Using worker: aiohttp.worker.GunicornWebWorker
+[2019-04-08 17:18:01 +0300] [39852] [INFO] Booting worker with pid: 39852
+[2019-04-08 17:18:07 +0300] [39849] [INFO] Handling signal: int
+[2019-04-08 17:18:07 +0300] [39849] [INFO] Shutting down: Master
+[2019-04-08 17:25:05 +0300] [39953] [INFO] Starting gunicorn 19.9.0
+[2019-04-08 17:25:05 +0300] [39953] [INFO] Listening at: http://127.0.0.1:8010 (39953)
+[2019-04-08 17:25:05 +0300] [39953] [INFO] Using worker: aiohttp.worker.GunicornWebWorker
+[2019-04-08 17:25:05 +0300] [39956] [INFO] Booting worker with pid: 39956
+[2019-04-08 17:25:16 +0300] [39953] [INFO] Handling signal: int
+[2019-04-08 17:25:16 +0300] [39953] [INFO] Shutting down: Master
