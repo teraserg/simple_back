@@ -11,7 +11,8 @@ logger = setup_logger()
 
 def setup_routes(app):
     app.router.add_get('/', handlers.welcome)
-    app.router.add_get('/api/{name}', handlers.welcome)
+    app.router.add_get('/api/hello/{name}', handlers.welcome)
+    app.router.add_get('/hc', handlers.health_check)
 
 
 async def startup(app: web.Application):
@@ -29,9 +30,12 @@ async def error_handler_middleware(request, handler):
 
     try:
         response = await handler(request)
+    except web.HTTPClientError:
+        raise
     except Exception as e:
         traceback_str = utils.exception_traceback_str(e)
-        return web.HTTPServiceUnavailable(reason=traceback_str)
+        logger.exception(traceback_str)
+        return web.HTTPServiceUnavailable(reason='unknown error')
 
     return response
 

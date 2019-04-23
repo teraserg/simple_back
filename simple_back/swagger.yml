@@ -10,7 +10,7 @@ produces:
 
 
 paths:
-  /{name}:
+  /api/hello/{name}:
     get:
       summary: Returns string "Hello, {name}".
       parameters:

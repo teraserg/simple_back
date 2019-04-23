@@ -16,4 +16,4 @@ RUN pip install --upgrade pip && pip install .
 
 CMD ["gunicorn", "simple_back.gunicorn:app", "-c", "simple_back/gunicorn.conf.py", "--access-logfile", "-"]
 
-HEALTHCHECK CMD curl -f localhost:8000 || exit 1
+HEALTHCHECK CMD curl -f localhost:8000/hc || exit 1
