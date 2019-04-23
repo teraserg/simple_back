@@ -3,24 +3,23 @@ from aiohttp import web
 from aiohttp_swagger import setup_swagger
 from simple_back import handlers
 from simple_back import utils
-
+from simple_back.logger import setup_logger
 
 THIS_DIR = pathlib.Path(__file__).parent
+logger = setup_logger()
 
 
 def setup_routes(app):
     app.router.add_get('/', handlers.welcome)
-    app.router.add_get('/{name}', handlers.welcome)
+    app.router.add_get('/api/{name}', handlers.welcome)
 
 
 async def startup(app: web.Application):
-    print(f'startup {app.name}')
-    pass
+    logger.info(f'app startup function')
 
 
 async def cleanup(app: web.Application):
-    print(f'cleanup {app.name}')
-    pass
+    logger.info(f'app cleanup function')
 
 
 @web.middleware
@@ -54,7 +53,7 @@ def create_app():
 
 
 def main():
-    print("Hello World!")
+    logger.info("Hello World!")
     app = create_app()
     web.run_app(app)
 
