@@ -19,7 +19,7 @@ run:
 
 run-gu:
 	. venv/bin/activate; \
-	gunicorn -c simple_back/gunicorn.conf.py --bind localhost:8000 --workers 1 simple_back.gunicorn:app
+	gunicorn -c simple_back/gunicorn.conf.py --bind localhost:8010 --workers 1 simple_back.gunicorn:app
 
 
 docker-build:
@@ -29,3 +29,16 @@ docker-build:
 
 docker-run:
 	docker run -d -p "8000:8000" --name $(NAME) $(NAME)
+
+
+docker-kill:
+	docker kill $(NAME); \
+	docker rm $(NAME)
+
+
+compose-run:
+	docker-compose -p postgres up -d
+
+
+compose-down:
+	docker-compose -p postgres down

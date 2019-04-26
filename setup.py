@@ -9,7 +9,9 @@ setup(
         'aiohttp==3.5.4',
         'aiohttp-swagger==1.0.5',
         'gunicorn==19.9.0',
-        'aiohttp_swagger'
+        'aiohttp_swagger',
+        'psycopg2-binary',
+        'sqlalchemy'
     ],
 
     extras_require={
