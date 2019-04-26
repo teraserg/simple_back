@@ -15,7 +15,7 @@ services:
   simple-back:
     image: simple-back
     restart: always
-      ports:
-      - 8000:8000
+    ports:
+    - 8000:8000
     environment:
       ENV: local-docker
